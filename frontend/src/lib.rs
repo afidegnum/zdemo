@@ -25,23 +25,29 @@ fn topheader() -> RawHtmlEl {
             RawHtmlEl::new("div")
                 .attr("class", "collapse navbar-collapse")
                 .attr("id", "navbarsExampleDefault")
-                .child(RawHtmlEl::new("ul").attr("class", "nav-item active "))
-                .children(array::IntoIter::new([
-                    RawHtmlEl::new("li")
-                        .attr("class", "nav-item active ")
-                        .child(
-                            RawHtmlEl::new("a")
-                                .attr("class", "nav-link")
-                                .attr("href", "index.html")
-                                .child("Welcome to the Page"),
-                        ),
-                    RawHtmlEl::new("li").attr("class", "nav-item active "),
-                ]))
                 .child(
-                    RawHtmlEl::new("a")
-                        .attr("class", "nav-link")
-                        .attr("href", "pages.html")
-                        .child("Logout"),
+                    RawHtmlEl::new("ul")
+                        .class("nav")
+                        .class("navbar-nav")
+                        .class("navbar-right")
+                        .children([
+                            RawHtmlEl::new("li")
+                                .attr("class", "nav-item active ")
+                                .child(
+                                    RawHtmlEl::new("a")
+                                        .attr("class", "nav-link")
+                                        .attr("href", "index.html")
+                                        .child("Welcome to the Page"),
+                                ),
+                            RawHtmlEl::new("li")
+                                .class("nav-item")
+                                .child(
+                                    RawHtmlEl::new("a")
+                                        .attr("class", "nav-link")
+                                        .attr("href", "pages.html")
+                                        .child("Logout"),
+                                )
+                        ])
                 ),
         ]))
 }
@@ -55,5 +61,5 @@ fn root() -> impl Element {
 
 #[wasm_bindgen(start)]
 pub fn start() {
-    start_app("app", topheader);
+    start_app(None, topheader);
 }
