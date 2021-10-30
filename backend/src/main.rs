@@ -15,6 +15,8 @@ pub mod error_handler;
 async fn frontend() -> Frontend {
     Frontend::new()
         .title("Counter example")
+        .default_styles(false)
+        .body_content("")
         .append_to_head(r#"<link href="/_api/public/css/styles.css" rel="stylesheet"/>"#)
         .append_to_head(r#"<link href="/_api/public/css/bootstrap/dist/css/bootstrap.min.3.4.0.css" rel="stylesheet"/>"#)
 }

@@ -3,10 +3,9 @@ body{
 }
 
 .navbar{
-  min-height: 50px !important ;
+  min-height: 50px !important;
   margin-bottom: 0 !important;
   border-radius: 0 !important;
-
 }
 
 .navbar-nav > li > a, .navbar-brand{
@@ -153,8 +152,8 @@ color: #ffffff  !important;
 }
 
 .main-color-bg{
-    background-color: #c0392b !importent;
-    color:#ffffff;
+    background-color: #c0392b !important;
+    color: #ffffff;
 }
 
 

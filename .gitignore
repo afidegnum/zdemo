@@ -1,3 +1,7 @@
 frontend/target
+# frontend/wasm-pack*
 backend/target
 target
+cargo_install_root
+mzoon
+mzoon.exe
